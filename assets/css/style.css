@@ -1,0 +1,81 @@
+body { 
+    background-color: lightgrey;
+    background-image: url("../images/background-img.jpg"); 
+    background-size: cover;
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .container { 
+      margin-top: 5vh;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  h1 { 
+      font-size: 7vw;
+      text-decoration: underline;
+      font-family: 'Noto Serif', serif;
+      padding-bottom: 1%;
+  }
+
+  #triviaGameHeader { 
+     
+      width: 80%;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+      text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+     
+  }
+
+  button { 
+      text-decoration: none;
+      padding: 0 1vw 0 1vw;
+      background-color: black;
+      color: whitesmoke;
+      font-size: 4vw;
+      font-family: 'Noto Serif', serif;
+  }
+
+  #gifSpace { 
+      width:  50%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+
+@media screen and (max-width: 640px) {
+
+    .container {width: 100%;}
+    
+      }
+
+      
+@media screen and (min-width: 641px) and (max-width: 959px) {
+
+    .container {width: 80%;}
+    
+      }
+     
+
+@media screen and (min-width: 960px) and (max-width: 1300px) {
+
+  .container {width: 80%;}
+
+  }
+
+  @media screen and (min-width: 1301px){
+
+    .container {width: 65%;}
+  
+    }
+
+
+  
