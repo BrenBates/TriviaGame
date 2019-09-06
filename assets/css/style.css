@@ -4,7 +4,6 @@ body {
     background-size: cover;
 }
 
-
 .clearfix::after {
     content: "";
     clear: both;
@@ -13,8 +12,10 @@ body {
 
   .container { 
       margin-top: 5vh;
+      font-size: 3vh;
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
   }
 
   h1 { 
@@ -22,6 +23,7 @@ body {
       text-decoration: underline;
       font-family: 'Noto Serif', serif;
       padding-bottom: 1%;
+      text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
   }
 
   #triviaGameHeader { 
@@ -50,17 +52,16 @@ body {
       margin-right: auto;
   }
 
+  #countDown { 
+      font-size: 4vw;
+  }
 
-@media screen and (max-width: 640px) {
 
-    .container {width: 100%;}
-    
-      }
 
-      
-@media screen and (min-width: 641px) and (max-width: 959px) {
+@media screen and (max-width: 959px) {
 
-    .container {width: 80%;}
+    .container {width: 100%;
+    }
     
       }
      
