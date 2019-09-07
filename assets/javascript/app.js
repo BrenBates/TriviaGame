@@ -93,7 +93,7 @@ var questionSeven = {
 
 //Lightning
 var questionEight = {
-    "text" : "In Final Fantasy 13, the main charater's name is?",
+    "text" : "In Final Fantasy 13, the main character's name is?",
     "optionOne" : '<br><button>Stormy</button>',
     "optionTwo" : "<br><button>Thunder</button>",
     "optionThree" : "<br><button>Halicarnassus</button>", 
