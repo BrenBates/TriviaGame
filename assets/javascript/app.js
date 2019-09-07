@@ -154,8 +154,9 @@ contentDiv.append(ffHeader).append(counterP).append(msgSpace);
 
  $(document).on('click', '#startGame', function() {
 
-
-    $('.container').css('background-color','lightblue');
+    ffAudio = new Audio("assets/mp3/oneWingedAngel.mp3");
+    ffAudio.play();
+    $('.container').css('background-color','rgba(173, 216, 230, 0.8)');
     $('.container').empty();
     $('#msg').empty();
     $('#gifSpace').empty().children().remove();
