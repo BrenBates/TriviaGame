@@ -12,7 +12,6 @@ body {
 
   .container { 
       margin-top: 5vh;
-      font-size: 3vh;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
@@ -20,29 +19,37 @@ body {
 
   h1 { 
       font-size: 7vw;
-      text-decoration: underline;
+      /* text-decoration: underline; */
       font-family: 'Noto Serif', serif;
       padding-bottom: 1%;
-      text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+      text-shadow: -0.1vw 0 white, 0 0.1vw white, 0.1vw 0 white, 0 -0.1vw white;
   }
 
   #triviaGameHeader { 
      
       width: 80%;
-      text-align: center;
       margin-left: auto;
       margin-right: auto;
       padding: 0;
-      text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    
      
   }
+
+  #msg { 
+      font-size: 2.5vw;
+  }
+
+  #countDown { 
+    font-size: 2.5vw;
+    font-style: italic;
+}
 
   button { 
       text-decoration: none;
       padding: 0 1vw 0 1vw;
       background-color: black;
       color: whitesmoke;
-      font-size: 4vw;
+      font-size: 2.5vw;
       font-family: 'Noto Serif', serif;
   }
 
@@ -52,16 +59,37 @@ body {
       margin-right: auto;
   }
 
-  #countDown { 
-      font-size: 4vw;
-  }
+ 
 
 
 
 @media screen and (max-width: 959px) {
 
+ 
+
     .container {width: 100%;
     }
+
+    h1 { 
+        font-size: 15vw;
+    }
+  
+    button { 
+        font-size: 9vw;
+    }
+
+    #msg { 
+        font-size: 9vw;
+    }
+  
+    #countDown { 
+      font-size: 9vw;
+  }
+
+  #gifSpace { 
+      width: 100%;
+  }
+  
     
       }
      
