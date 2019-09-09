@@ -26,7 +26,7 @@ var questionTwo = {
     "optionTwo" : "<br><button>Locke Cole</button>",
     "optionThree" : "<br><button>Setzer Gabbiani</button>", 
     "optionFour" : "<br><button class = 'correct'>Sabin Rene Figaro</button>",
-    "answer" : "Sabin",
+    "answer" : "Sabin Rene Figaro",
     "gif" : '<div class="tenor-gif-embed" data-postid="12127442" data-share-method="host" data-width="100%" data-aspect-ratio="1.1531531531531531"><a href="https://tenor.com/view/ffvi-suplex-sabin-train-phantom-train-gif-12127442">Ffvi Suplex GIF</a> from <a href="https://tenor.com/search/ffvi-gifs">Ffvi GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>',
     "gifTime" : 5000
 };
@@ -62,7 +62,7 @@ var questionFive = {
     "optionTwo" : "<br><button>Ramza Beoulve</button>",
     "optionThree" : "<br><button>Zidane Tribal</button>", 
     "optionFour" : "<br><button class='correct'>Squall Leonhart</button>",
-    "answer" : "Squall",
+    "answer" : "Squall Leonhart",
     "gif" : '<div class="tenor-gif-embed" data-postid="12309258" data-share-method="host" data-width="100%" data-aspect-ratio="1.2835051546391754"><a href="https://tenor.com/view/final-fantasy8-rinoa-squall-ff8-funny-gif-12309258">Final Fantasy8 Rinoa GIF</a> from <a href="https://tenor.com/search/finalfantasy8-gifs">Finalfantasy8 GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>',
     "gifTime" : 2500
 };
@@ -137,7 +137,7 @@ let questionIndex = 0;
 let correctCount = 0; 
 let incorrectCount = 0;
 let questionAnswered = false;
-let timer = 10;
+let timer = 11;
 let contentDiv = $('<div>');
 let msgSpace = $('<p>');
 let counterP = $('<p>');
@@ -177,7 +177,7 @@ if(questionIndex === questions.length) {
     endGame()
 } else {
 
-timer=10;
+timer=11;
 console.log(questionIndex);
 questionAnswered = false;
 $('#msg').empty();
@@ -194,7 +194,6 @@ $('#gifSpace').empty();
 
  $(document).on('click', 'button', function() {
 
-     
 
      if( $(this).hasClass('correct') === true && questionAnswered === false ) {
          $('#msg').empty().append('That is correct!');
@@ -237,10 +236,20 @@ $('#gifSpace').empty();
 
 function myTimer() {
 timer = timer-1;
- $('#countDown').empty().append('Time remaining: ' + timer);
+ $('#countDown').empty().append('Time Remaining: ' + timer);
 
  if (timer <= 0) {
-     clearInterval(timeVar);
+    $('#msg').empty().append('Time is up!  The correct answer was ' + questions[questionIndex].answer + '.');
+    $('#gifSpace').append(questions[questionIndex].gif);
+    questionIndex += 1;
+    clearInterval(timeVar);
+    questionAnswered = true;
+       
+     if(questionIndex <= questions.length) {
+        return setTimeout(nextQuestion, questions[questionIndex-1].gifTime);
+     } else { 
+        endGame();
+     }
    }
 
   }
@@ -261,6 +270,8 @@ function endGame() {
 
 }
 
+
+//Gif list: 
 //Final Fantasy opener
 //<div class="tenor-gif-embed" data-postid="11029638" data-share-method="host" data-width="100%" data-aspect-ratio="2.083682008368201"><a href="https://tenor.com/view/final-fantasy-gif-11029638">Final Fantasy GIF</a> from <a href="https://tenor.com/search/finalfantasy-gifs">Finalfantasy GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
