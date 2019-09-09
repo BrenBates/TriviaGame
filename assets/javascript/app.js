@@ -257,7 +257,7 @@ $(document).ready(function () {
     function endGame() {
 
         $('#gifSpace').empty();
-        $('#countDown').append('<br>All done, heres how you did!')
+        $('#countDown').append('<br>All done, here\'s how you did!')
         $('#msg').empty().append('Correct Answers: ' + correctCount);
         $('#msg').append('<br>Incorrect Answers: ' + incorrectCount);
         $('#msg').append('<br>Unanswered: ' + (questions.length - incorrectCount - correctCount));
