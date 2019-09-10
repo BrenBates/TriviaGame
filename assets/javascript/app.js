@@ -117,7 +117,7 @@ $(document).ready(function () {
 
     //Siren
     var questionTen = {
-        "text": "This summon stems from Greek mythology.  An entity that lures sailurs to their doom.",
+        "text": "This summon stems from Greek mythology.  An entity that lures sailors to their doom.",
         "optionOne": '<br><button>Shiva</button>',
         "optionTwo": "<br><button>Asura</button>",
         "optionThree": "<br><button class = 'correct'>Siren</button>",
