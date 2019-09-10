@@ -47,6 +47,11 @@ button {
     font-family: 'Noto Serif', serif;
 }
 
+button:hover { 
+    background-color: whitesmoke;
+    color: black;
+}
+
 #gifSpace {
     width: 50%;
     margin-left: auto;
