@@ -7,6 +7,7 @@ $(document).ready(function () {
     let incorrectCount = 0;
     let questionAnswered = false;
     let timer = 11;
+    let timeVar = '';
     let contentDiv = $('<div>');
     let msgSpace = $('<p>');
     let counterP = $('<p>');
@@ -201,7 +202,7 @@ $(document).ready(function () {
             $('#msg').append(questions[questionIndex].optionFour);
 
 
-            timeVar = setInterval(myTimer, 1000);
+             timeVar = setInterval(myTimer, 1000);
 
             $(document).on('click', '.question', function () {
 
@@ -256,8 +257,9 @@ $(document).ready(function () {
         startOver.append('Start Over?');
         $('#msg').append('<br>', startOver);
         $(document).on('click', '#restartGame', function () {
-            //reinitialize variables to clear old data, then start nextQuestion
+            //reinitialize variables to clear old data, clear the time interval and then start nextQuestion again to restart the game.
             initialize();
+            clearInterval(timeVar);
             nextQuestion();
         });
 
