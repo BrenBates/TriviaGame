@@ -6,7 +6,7 @@ $(document).ready(function () {
     let correctCount = 0;
     let incorrectCount = 0;
     let questionAnswered = false;
-    let timer = 11;
+    let timer = 0;
     let timeVar = '';
     let contentDiv = $('<div>');
     let msgSpace = $('<p>');
@@ -176,7 +176,6 @@ $(document).ready(function () {
         correctCount = 0;
         incorrectCount = 0;
         questionAnswered = false;
-        timer = 11;
         $('#msg').empty();
         $('#gifSpace').empty().children().remove();
         $('#countDown').empty();
@@ -184,12 +183,15 @@ $(document).ready(function () {
 
     function nextQuestion() {
 
+      
 
         if (questionIndex === questions.length) {
             endGame()
         } else {
 
-            timer = 11;
+            timer = 10;
+            $('#countDown').empty().append('Time Remaining: ' + timer);
+           
             console.log(questionIndex);
             questionAnswered = false;
             $('#msg').empty();
@@ -206,6 +208,7 @@ $(document).ready(function () {
 
             $(document).on('click', '.question', function () {
 
+               
 
                 if ($(this).hasClass('correct') === true && questionAnswered === false) {
                     $('#msg').empty().append('That is correct!');
