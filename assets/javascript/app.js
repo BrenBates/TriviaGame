@@ -17,7 +17,7 @@ $(document).ready(function () {
     counterP.attr('id', 'countDown');
     msgSpace.attr('id', 'msg');
     gifSpace.attr('id', 'gifSpace');
-    contentDiv.append(ffHeader).append(counterP).append(msgSpace);
+    contentDiv.append(ffHeader, counterP, msgSpace);
 
 
     //Main process
