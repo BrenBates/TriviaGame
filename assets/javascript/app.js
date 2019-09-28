@@ -1,4 +1,5 @@
-//Testing Git pull requests
+
+//Testing github branches
 
 $(document).ready(function () {
 
