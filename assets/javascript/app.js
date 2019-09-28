@@ -1,3 +1,5 @@
+//Testing github branches
+
 $(document).ready(function () {
 
     //Global variables
