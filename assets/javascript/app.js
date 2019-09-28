@@ -1,3 +1,5 @@
+//Testing Git pull requests
+
 $(document).ready(function () {
 
     //Global variables
